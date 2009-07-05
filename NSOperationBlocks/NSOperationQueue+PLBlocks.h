@@ -10,5 +10,5 @@
 
 
 @interface NSOperationQueue (PLBlocks)
-- (void) plAddOperationWithBlock: (void (^)()) block;
+- (void) pl_addOperationWithBlock: (void (^)()) block;
 @end

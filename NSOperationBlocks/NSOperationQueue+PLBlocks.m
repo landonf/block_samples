@@ -27,7 +27,7 @@
 /**
  * Add a block-based operation to the queue.
  */
-- (void) plAddOperationWithBlock: (void (^)()) block {
+- (void) pl_addOperationWithBlock: (void (^)()) block {
     [self addOperation: [PLBlockOperation blockOperationWithBlock: block]];
 }
 

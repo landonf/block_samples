@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSThread (PLBlocks)
-- (void) performBlock: (void (^)()) block;
-- (void) performBlock: (void (^)()) block waitUntilDone: (BOOL) wait;
+- (void) pl_performBlock: (void (^)()) block;
+- (void) pl_performBlock: (void (^)()) block waitUntilDone: (BOOL) wait;
 @end

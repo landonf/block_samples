@@ -27,8 +27,8 @@
  * Schedule a block for execution on this thread.
  * @param block Block to execute
  */
-- (void) performBlock: (void (^)()) block {
-    [self performBlock: block waitUntilDone: NO];
+- (void) pl_performBlock: (void (^)()) block {
+    [self pl_performBlock: block waitUntilDone: NO];
 }
 
 /**
@@ -37,7 +37,7 @@
  * @param block Block to execute
  * @param wait If YES, wait until the block has executed prior to returning.
  */
-- (void) performBlock: (void (^)()) block waitUntilDone: (BOOL) wait {
+- (void) pl_performBlock: (void (^)()) block waitUntilDone: (BOOL) wait {
     [self performSelector: @selector(_plblock_execute:)
                  onThread: self
                withObject: [[block copy] autorelease]
