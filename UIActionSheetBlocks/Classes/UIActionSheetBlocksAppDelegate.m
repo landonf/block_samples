@@ -19,8 +19,7 @@
 - (void) displaySheet {
     PLActionSheet *sheet = [[PLActionSheet alloc] initWithTitle: @"Destination"];
     
-    /* A re-usable block that simply displays an alert message and then re-displays
-     * the sheet */
+    /* A re-usable block that simply displays an alert message */
     void (^alert)(NSString *) = ^(NSString *message) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Destination Selected"
                                                         message: message
